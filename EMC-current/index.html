@@ -64,8 +64,31 @@ Vancouver BC</p>
 <div class="content">
 <div class="inner">
 <h2>FAQ</h2>
+<button class="collapsible">How can I get involved?</button>
+<div class="collapsiblecontent">
+	<ul>
+		<li>If you're interested in competing at the event, click <a href="http://bit.ly/EM2C-Attend">here</a> for tickets!</li>
+		<li>If you're interested in volunteering at the event, click <a href="http://bit.ly/EM2C-Volunteer">here</a> to register!</li>
+		<li>If you're interested in sponsoring the event, see the "sponsors" section for more info!</li>
+	</ul>
+</div>
 
-<p>More info coming soon...</p>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+</script>
 </div>
 </div>
 </section>
@@ -191,8 +214,8 @@ Vancouver BC</p>
 	<h3>Social</h3>
 
 	<ul class="icons">
-		<li><a class="fa-twitter" href="https://twitter.com/EM2C_event"><span class="label">Twitter</span></a></li>
-		<li><a href="https://www.facebook.com/EM2Cevent/" class="fa-facebook"><span class="label">Facebook</span></a></li>
+		<li><a class="fa-twitter" href="https://twitter.com/EM2CChallenge"><span class="label">Twitter</span></a></li>
+		<li><a href="https://www.facebook.com/EM2CChallenge/" class="fa-facebook"><span class="label">Facebook</span></a></li>
 											<!--	<li><a href="#" class="fa-github"><span class="label">GitHub</span></a></li>
 												<li><a href="#" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>-->
 		<li><a class="fa-instagram" href="https://www.instagram.com/ubc_eml/?hl=en"><span class="label">Instagram</span></a></li>
