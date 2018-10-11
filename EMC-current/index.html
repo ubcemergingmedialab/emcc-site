@@ -65,7 +65,7 @@ Vancouver BC</p>
 <div class="inner">
 <h2>FAQ</h2>
 <button class="collapsible">How can I get involved?</button>
-<div class="collapsiblecontent">
+<div class="collapsiblecontent" style='display:none'>
 	<ul>
 		<li>If you're interested in competing at the event, click <a href="http://bit.ly/EM2C-Attend">here</a> for tickets!</li>
 		<li>If you're interested in volunteering at the event, click <a href="http://bit.ly/EM2C-Volunteer">here</a> to register!</li>
@@ -81,12 +81,14 @@ for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
+    if (content.style.display == 'block'){
+      content.style.display = 'none';
     } else {
+      content.style.display = 'block';
       content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
+  console.log(i)
 }
 </script>
 </div>
@@ -164,6 +166,7 @@ for (i = 0; i < coll.length; i++) {
 <h2>Sponsors</h2>
 <ul>
 <li>UBC School of Biomedical Engineering</li>
+<li>UBC IT Audio and Visual Services</li>
 </ul>
 <h3>Sponsorship</h3>
 
